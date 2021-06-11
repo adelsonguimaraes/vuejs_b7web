@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js</title>
+	<meta charset="utf-8" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div id="app">
+		<header class="header">
+			<h1>Aula 35 - Bind em valores</h1>
+		</header>
+		<section class="container">
+			<section class="container__content">
+
+				<input type="checkbox" v-model="marcado" true-value="sim" false-value="nao">
+
+				<p>Marcado: {{marcado}}</p>
+
+				<select v-model="selecionado">
+					<option :value="{nome: 'Adelson', idade:32}">Opção 1</option>
+					<option :value="{nome: 'Raquel', idade:32}">Opção 2</option>
+					<option :value="{nome: 'Pipoca', idade:10}">Opção 3</option>
+				</select>
+
+				<p>Selecionado: {{selecionado}}</p>
+				
+			</section>
+			<aside class="container__sidebar">
+
+				
+				
+			</aside>
+		</section>
+		<footer class="footer">
+
+		</footer>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js</title>
+	<meta charset="utf-8" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div id="app">
+		<header class="header">
+			<h1>Aula 34 - Bind em formulários</h1>
+		</header>
+		<section class="container">
+			<section class="container__content">
+
+				<input type="text" v-model="menssagem">
+
+				<p>Menssagem: {{menssagem}}</p>
+
+				<input type="checkbox" value="Adelson" v-model="nomes"> Adelson <br>
+				<input type="checkbox" value="Raquel" v-model="nomes"> Raquel <br>
+				<input type="checkbox" value="Pipoca" v-model="nomes"> Pipoca <br>
+
+				<p>Nomes: {{nomes}}</p>
+
+				<input type="radio" name="grupo" value="Sim" v-model="grupo"> Sim
+				<input type="radio" name="grupo" value="Não" v-model="grupo"> Não
+
+				<p>Grupo: {{grupo}}</p>
+
+				<select v-model="opcao">
+					<option v-for="nome in nomes" :value="nome">{{nome}}</option>
+				</select>
+
+				<p>{{opcao}}</p>
+				
+			</section>
+			<aside class="container__sidebar">
+
+				
+				
+			</aside>
+		</section>
+		<footer class="footer">
+
+		</footer>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

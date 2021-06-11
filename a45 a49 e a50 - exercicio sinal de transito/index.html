@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js</title>
+	<meta charset="utf-8" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div id="app">
+		<header class="header" id="header">
+			<h1>Aula 45,49 e 50 - Exercício: Sinal de trânsito</h1>
+
+		</header>
+		<section class="container">
+			<section class="container__content" id="conteudo">
+
+				<div class="controle">
+					<button @click="liberar" v-if="sinalStatus == 'vermelha'">Liberar</button>
+					<button @click="fechar" v-else="">Fechar</button>
+				</div>
+
+				<sinal :status="sinalStatus"/>
+				
+			</section>
+			<aside class="container__sidebar" id="sidebar">
+
+				
+			</aside>
+		</section>
+		<footer class="footer">
+
+		</footer>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
